@@ -1,9 +1,8 @@
-import React from 'react'
-import { Theme } from '../../components/theme/Theme'
-import { Navigation } from '../../components/Navigation.jsx/Navigation'
+import React from 'react';
+import { Navigation } from '../../components/navigation/Navigation';
 
 export function Header(props) {
-    
+
 
     return (
         <header className='flex items-center justify-between p-5'>

@@ -1,20 +1,17 @@
 import { Header } from "./containers/header/Header";
-import { useLocalStorage } from "./hooks/localStorage"
-import { StyleProvider } from "./contexts/StyleContext";
+import { Splash } from "./containers/splash/Splash";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
+import { getItem } from './hooks/localStorage';
 
 function App() {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
-
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
+  const theme = getItem('theme');
 
   return (
-    <div className={isDark ? "dark" : null}>
-      <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+    <div className={(theme === 'dark' ? 'dark:bg-darkBgColor dark:text-white ' : '') + 'transition-all duration-300 ease-in-out'}>
+      <ThemeContextProvider>
         <Header />
-      </StyleProvider>
+        <Splash />
+      </ThemeContextProvider>
     </div>
   );
 }

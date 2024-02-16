@@ -1,20 +1,20 @@
-import React, { useState, useContext } from "react";
-import StyleContext from "../../contexts/StyleContext"
+import React, { useState } from "react";
+import { useSharedThemeState } from "../../contexts/ThemeContext";
 import emoji from "react-easy-emoji";
 
 export function Theme(props) {
-    const { isDark } = useContext(StyleContext);
-    const [isChecked, setChecked] = useState(isDark);
-    const styleContext = useContext(StyleContext);
+    const { theme, toggleTheme } = useSharedThemeState();
+    const [isChecked, setChecked] = useState(theme === "dark" ? true : false);
 
     return (
+
         <label className="relative inline-block w-[50px] h-[27px] ml-20">
             <input
                 className="peer/input transform scale-50"
                 type="checkbox"
-                checked={isDark}
+                checked={isChecked}
                 onChange={() => {
-                    styleContext.changeTheme();
+                    toggleTheme();
                     setChecked(!isChecked);
                 }}
             />
