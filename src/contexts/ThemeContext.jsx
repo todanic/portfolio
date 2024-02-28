@@ -7,7 +7,7 @@ export const ThemeContextProvider = ({ children }) => {
   const storedTheme = getItem('theme');
   const { value: theme, setValue: setTheme } = useLocalStorageValue(
     'theme',
-    storedTheme || 'light'
+    storedTheme || 'dark'
   );
 
   const toggleTheme = useCallback(() => {

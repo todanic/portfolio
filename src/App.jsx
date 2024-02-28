@@ -3,6 +3,9 @@ import Skills from "./containers/skills/Skills";
 import { Splash } from "./containers/splash/Splash";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
 import { getItem } from "./hooks/localStorage";
+import { experience, skills, projects } from './consts.js'
+import { Experiences } from "./containers/experiences/Experiences.jsx";
+import { Projects } from "./containers/projects/Projects.jsx";
 
 function App() {
   const theme = getItem("theme");
@@ -17,7 +20,9 @@ function App() {
       <ThemeContextProvider>
         <Header />
         <Splash />
-        <Skills />
+        <Skills skills={skills} />
+        <Experiences experiences={experience} />
+        <Projects projects={projects} />
       </ThemeContextProvider>
     </div>
   );

@@ -2,42 +2,24 @@ import React from "react";
 import Skill from "../../components/skill/Skill";
 import LottieImage from "../../components/lottieImage/LottieImage";
 import skillsSvg from "../../assets/lottie/skillsSvg.json";
+import emoji from "react-easy-emoji";
 
-const skills = [
-  {
-    label: "html",
-    iconClass: "fab fa-html5",
-  },
-  {
-    label: "css",
-    iconClass: "fab fa-css3-alt",
-  },
-  {
-    label: "sass",
-    iconClass: "fab fa-sass",
-  },
-  {
-    label: "JavaScript",
-    iconClass: "fab fa-js",
-  },
-  {
-    label: "React",
-    iconClass: "fab fa-react",
-  },
-];
-export default function Skills() {
+
+
+export default function Skills({ skills }) {
+
   return (
-    <div className="flex pl-20 pr-20 items-center mt-10">
+    <div className="flex pl-20 pr-20 mt-12 items-start pt-10">
       <div className="flex-1">
         <LottieImage animationData={skillsSvg} />
       </div>
       <div className="flex-1">
-        <h2 className="text-5xl mb-7">What i do?</h2>
-        <p>
+        <h2 className="text-6xl mb-7">What i do?</h2>
+        <p className="uppercase leading-8 text-lg">
           Frontend Developer with Full Stack experience in building web
           applications.
         </p>
-        <ul className="flex">
+        <ul className="flex mt-5">
           {skills.map((skill) => (
             <Skill
               key={skill.label}
@@ -46,6 +28,22 @@ export default function Skills() {
             />
           ))}
         </ul>
+        <p className="mt-8">
+          {emoji(
+            "⚡ Develop highly interactive Front end / User Interfaces for your web applications"
+          )}
+        </p>
+        <p className="mt-5">
+          {emoji(
+            "⚡ Develop websites that meet industry and company standards for SEO and accessibility."
+          )}
+        </p>
+
+        <p className="mt-5">
+          {emoji(
+            "⚡ Highly optimized and responsive web pages for better user experience"
+          )}
+        </p>
       </div>
     </div>
   );
