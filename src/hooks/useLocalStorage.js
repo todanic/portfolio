@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
 // Function to store a value in localStorage with a specified key
 export const setItem = (key, value) => {
@@ -8,7 +8,7 @@ export const setItem = (key, value) => {
 // Function to retrieve a value from localStorage using a specified key
 export const getItem = (key) => {
   const item = localStorage.getItem(key);
-  return item ? JSON.parse(item) : null;
+  return item ? item : null;
 };
 
 // Custom hook to manage a value in localStorage with provided key and initial value

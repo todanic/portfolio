@@ -14,6 +14,9 @@ module.exports = {
         11: '2.6rem',
         12: '3.5rem',
       },
+      boxShadow: {
+        '2xl': '0px 10px 30px -15px #d9dbdf',
+      },
       keyframes: {
         wave: {
           '0%': { transform: 'rotate(0deg)' },

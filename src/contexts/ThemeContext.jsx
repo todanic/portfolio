@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useCallback, useEffect } from 'react';
-import { getItem, useLocalStorageValue } from '../hooks/localStorage';
+import { getItem, useLocalStorageValue } from '../hooks/useLocalStorage';
 import PropTypes from 'prop-types';
 const ThemeContext = createContext('');
 
