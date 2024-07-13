@@ -10,7 +10,7 @@ import { Footer } from "./containers/footer/Footer.jsx";
 
 function App() {
   const theme = getItem("theme");
-  console.log(theme);
+
   return (
     <div
       className={

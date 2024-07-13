@@ -24,24 +24,13 @@ export const skills = [
 //Experience Icons for the experience section
 export const experience = [
   {
-    id: 1,
-    bigLogo: true,
-    whiteBackground: false,
-    name: "BCool IT",
-    position: "Full-Stack Developer",
-    date: "June 2018 – January 2021",
-    image: "/images/bcoolit.png",
-    description:
-      "As a Full-Stack developer i worked with PHP, Vanilla JavaScript/jQuery and LESS, I was responsible for maintaining a custom CMS of the company, this included adding new widgets, mainataining existing widgets, creating RESTful APIs..."
-  },
-  {
-    id: 2,
+    id: 4,
     whiteBackground: true,
-    bigLogo: true,
-    name: "EPAM Systems",
-    position: "Front-End Developer",
-    date: "January 2021 – October 2022",
-    image: "/images/epam.png",
+
+    name: "Centific",
+    position: "Senior Frontend Developer",
+    date: "April 2024 – Present",
+    image: "/images/centific-new.jfif",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
@@ -57,15 +46,26 @@ export const experience = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
-    id: 4,
+    id: 2,
     whiteBackground: true,
     bigLogo: true,
-    name: "Centific",
-    position: "Senior Frontend Developer",
-    date: "April 2024 – Present",
+    name: "EPAM Systems",
+    position: "Front-End Developer",
+    date: "January 2021 – October 2022",
     image: "/images/epam.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    id: 1,
+    bigLogo: true,
+    whiteBackground: false,
+    name: "BCool IT",
+    position: "Full-Stack Developer",
+    date: "June 2018 – January 2021",
+    image: "/images/bcoolit.png",
+    description:
+      "As a Full-Stack developer i worked with PHP, Vanilla JavaScript/jQuery and LESS, I was responsible for maintaining a custom CMS of the company, this included adding new widgets, mainataining existing widgets, creating RESTful APIs..."
   }
 ];
 

@@ -1,22 +1,19 @@
-import React, { createContext, useContext, useCallback, useEffect } from 'react';
-import { getItem, useLocalStorageValue } from '../hooks/useLocalStorage';
-import PropTypes from 'prop-types';
-const ThemeContext = createContext('');
+import React, { createContext, useContext, useCallback, useEffect } from "react";
+import { getItem, useLocalStorageValue } from "../hooks/useLocalStorage";
+import PropTypes from "prop-types";
+const ThemeContext = createContext("");
 
 export const ThemeContextProvider = ({ children }) => {
-  const storedTheme = getItem('theme');
-  const { value: theme, setValue: setTheme } = useLocalStorageValue(
-    'theme',
-    storedTheme || 'dark'
-  );
+  const storedTheme = getItem("theme");
+  const { value: theme, setValue: setTheme } = useLocalStorageValue("theme", storedTheme || "dark");
 
   const toggleTheme = useCallback(() => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   }, [theme, setTheme]);
 
   useEffect(() => {
-    document.body.classList.remove('light', 'dark');
+    document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
   }, [theme]);
 

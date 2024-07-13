@@ -8,7 +8,7 @@ export const setItem = (key, value) => {
 // Function to retrieve a value from localStorage using a specified key
 export const getItem = (key) => {
   const item = localStorage.getItem(key);
-  return item ? item : null;
+  return item ? JSON.parse(item) : null;
 };
 
 // Custom hook to manage a value in localStorage with provided key and initial value

@@ -8,10 +8,13 @@ export function Footer() {
   return (
     <div
       ref={targetRef}
-      className={(isVisible ? "fade-in " : "") + "pb-6 flex pl-20 pr-20 mt-12 opacity-0"}
+      className={
+        (isVisible ? "fade-in " : "") +
+        "pb-6 flex md:pl-20 md:pr-20 pl-6 pr-6 mt-12 opacity-0 flex-col sm:flex-row"
+      }
       id='contact'>
       <div className='flex-1'>
-        <h2 className='text-6xl mb-10'>Reach out to me!</h2>
+        <h2 className='md:text-6xl text-4xl mb-10'>Reach out to me!</h2>
         <p>Open for opportunities:</p>
         <Social />
       </div>
