@@ -27,7 +27,7 @@ export const experience = [
     id: 4,
     whiteBackground: true,
 
-    name: "Centific",
+    name: "Centific/Microsoft",
     position: "Senior Frontend Developer",
     date: "April 2024 – Present",
     image: "/images/centific-new.jfif",

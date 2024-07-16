@@ -4,7 +4,7 @@ export function ProjectCard({ project }) {
   const { name, url, githubUrl, description } = project;
 
   return (
-    <div className='shadow-2xl hover:shadow-xl transition-all duration-250 ease flex flex-col bg-gray-900 p-6 rounded border border-gray-400 justify-center text-center'>
+    <div className='shadow-2xl hover:shadow-xl transition-all duration-250 ease flex flex-col dark:bg-gray-900 p-6 rounded border border-gray-400 justify-center text-center'>
       <h2 className='text-2xl font-bold py-4'>{name}</h2>
       <p className='pb-6'>{description}</p>
       <div className='flex justify-center items-center'>

@@ -24,15 +24,10 @@ module.exports = {
           "40%": { transform: "rotate(9deg)" },
           "50%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(0deg)" }
-        },
-        scaleX: {
-          "0%, 100%": { transform: "scaleX(1)" },
-          "50%": { transform: "scaleX(1.5)" }
         }
       },
       animation: {
-        wave: "wave 1.8s infinite",
-        scale: "scaleX 2s ease-in-out infinite"
+        wave: "wave 1.8s infinite"
       },
       fontFamily: {
         agustina: ["Agustina Regular", "sans-serif"]
